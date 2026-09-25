@@ -835,3 +835,13 @@ function restart() {
     showScreen("screen-start");
 
 }
+
+// As telas usam handlers inline no HTML; exponha as funções chamadas por eles.
+Object.assign(window, {
+    start,
+    showScreen,
+    selectGoal,
+    continueGoal,
+    startQuiz,
+    restart
+});
